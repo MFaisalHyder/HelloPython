@@ -1,13 +1,17 @@
 """
 Tuple is a sequence of immutable Python Objects.
 eg: egTuple = ('Faisal', 1994, 23.9).
-Slicing on tuples with wrong indexes doesn't give index out of bound error
+Slicing on tuples with wrong indexes doesn't give index out of bound error.
+It is immutable in a sense that you can add items in it but you can't re assign items at indexes.
 """
 egTuple = ('Faisal', 1994, 23.9)
 
 # Concatenation
-egTuple += ('Hyder', 'Royal Cyber')
+egTuple = egTuple + ('Hyder', 'Royal Cyber')
 print(egTuple)
+
+# Immutable
+# egTuple[0] = 'updated Item'
 
 # Index
 print(egTuple[0])
