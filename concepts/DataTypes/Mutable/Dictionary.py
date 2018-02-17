@@ -24,3 +24,19 @@ print(egDictionary.keys())
 
 # values()
 print(egDictionary.values())
+
+# items() [same as value but prints complete key-value pair]
+print(egDictionary.items())
+
+# get(key) [similar to key access approach]
+print(egDictionary.get('first'))
+print(egDictionary.get(1))
+
+# update()
+egDictionary.update({'first': 'PL'})
+print(egDictionary)
+
+# pop() [ removes element wrt given key]
+# print(egDictionary.pop('second'))
+egDictionary.pop('second')
+print(egDictionary)
