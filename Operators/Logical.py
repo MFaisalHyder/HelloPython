@@ -21,3 +21,4 @@ print("0 or -3 =>", 0 or -3)  # -3
 print("not 2 =>", not 2)
 print("not -3 =>", not -3)
 print("not 0 =>", not 0)
+print("not false", not false)
