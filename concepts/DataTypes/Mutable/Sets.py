@@ -1,5 +1,5 @@
 """
-Set is an unordered collection of immutable items
+Set is an unordered collection of distinct immutable items
 egSet = {1,2,'Faisal'}
 """
 
