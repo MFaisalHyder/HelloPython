@@ -3,10 +3,10 @@ chargePerDay = int(input("Enter the per day cost of labour \n"))
 taxDeduction = int(input("Enter the percent of tax to be deducted for PF \n"))
 
 
-def calculate_pay(daysWorked, chargePerDay, taxDeduction):
-    if daysWorked > 0 and chargePerDay > 0 and taxDeduction > 0:
-        salary = (daysWorked * chargePerDay)
-        salary = salary - (salary * taxDeduction / 100)
+def calculate_pay(days_worked, charge_per_day, tax_deduction):
+    if days_worked > 0 and charge_per_day > 0 and tax_deduction > 0:
+        salary = (days_worked * charge_per_day)
+        salary = salary - (salary * tax_deduction / 100)
         return salary
 
 
