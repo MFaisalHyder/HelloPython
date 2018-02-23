@@ -18,3 +18,5 @@ class Employee:
 employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 99999999)
 
 print(employeeFaisal.employee_info())
+# methods are transformed into class_name.method_name(instance)
+# i.e. Employee.employee_info(employeeFaisal)
