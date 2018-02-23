@@ -4,9 +4,9 @@ def fibonacci_series(number):
 
     print(a, b, end=" ")
 
-    while number >= 1:
+    for x in range(inputNumber):  # while inputNumber >= 1:
         a, b = b, a + b
-        number -= 1
+        # inputNumber -= 1
 
         print(b, end=" ")
 
