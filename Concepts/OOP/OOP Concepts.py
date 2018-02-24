@@ -20,7 +20,7 @@ class Employee:
         self.salary = int(Employee.raise_amount * self.salary)
 
 
-employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 99999999)
+employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 81000)
 employeeShane = Employee('Shane', 'Mathew', 'Corey', 'AV_10000886', 'Software Engineer', 85000)
 
 print(employeeFaisal.employee_info())
@@ -35,3 +35,6 @@ print("Faisal's salary after increment", employeeFaisal.salary)
 print("Shane's salary", employeeShane.salary)
 print("Increment for Shane : ", employeeShane.raise_amount, employeeShane.increment())
 print("Shane's salary after increment", employeeShane.salary)
+
+# To check if an instance contains variable or what are the attributes of an instance run following
+# employeeFaisal.__dict__
