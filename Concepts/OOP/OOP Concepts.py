@@ -23,6 +23,12 @@ class Employee:
     def apply_increment(cls, amount):
         cls.raise_amount = amount
 
+    # Here class method is used as instance method, alternative of conventional init method
+    @classmethod
+    def create_employee(cls, comma_separated_employee_string):
+        f_name, m_name, l_name, emp_number, designation, salary = comma_separated_employee_string.split(",")
+        return cls(f_name, m_name, l_name, emp_number, designation, salary)
+
 
 employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 81000)
 employeeShane = Employee('Shane', 'Mathew', 'Corey', 'AV_10000886', 'Software Engineer', 85000)
@@ -49,3 +55,8 @@ Employee.apply_increment(1.07)
 print('Applying class method')
 print('Class variable variable : raise_amount => [employeeFaisal] ', employeeFaisal.raise_amount)
 print('Class variable variable : raise_amount => [employeeShane]  ', employeeShane.raise_amount)
+
+employeeCorey = "McCalmont,Corey,Philips,DV_780,Suply Manager,105000"
+employeeCorey = Employee.create_employee(employeeCorey)
+
+print(employeeCorey.firstName, employeeCorey.lastName, employeeCorey.salary)
