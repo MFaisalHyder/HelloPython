@@ -19,6 +19,10 @@ class Employee:
     def increment(self):
         self.salary = int(Employee.raise_amount * self.salary)
 
+    @classmethod
+    def apply_increment(cls, amount):
+        cls.raise_amount = amount
+
 
 employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 81000)
 employeeShane = Employee('Shane', 'Mathew', 'Corey', 'AV_10000886', 'Software Engineer', 85000)
@@ -38,3 +42,10 @@ print("Shane's salary after increment", employeeShane.salary)
 
 # To check if an instance contains variable or what are the attributes of an instance run following
 # employeeFaisal.__dict__
+
+print('Class variable variable : raise_amount => ', Employee.raise_amount)
+# Applying class method
+Employee.apply_increment(1.07)
+print('Applying class method')
+print('Class variable variable : raise_amount => [employeeFaisal] ', employeeFaisal.raise_amount)
+print('Class variable variable : raise_amount => [employeeShane]  ', employeeShane.raise_amount)
