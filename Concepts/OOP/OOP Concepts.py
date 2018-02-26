@@ -29,6 +29,13 @@ class Employee:
         f_name, m_name, l_name, emp_number, designation, salary = comma_separated_employee_string.split(",")
         return cls(f_name, m_name, l_name, emp_number, designation, salary)
 
+    # Static methods differ from Class and Instance methods as they do not take instance or class as first argument
+    @staticmethod
+    def is_over_time_payable(over_time_hours):
+        if over_time_hours >= 6:
+            return True
+        return False
+
 
 employeeFaisal = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 81000)
 employeeShane = Employee('Shane', 'Mathew', 'Corey', 'AV_10000886', 'Software Engineer', 85000)
@@ -60,3 +67,6 @@ employeeCorey = "McCalmont,Corey,Philips,DV_780,Suply Manager,105000"
 employeeCorey = Employee.create_employee(employeeCorey)
 
 print(employeeCorey.firstName, employeeCorey.lastName, employeeCorey.salary)
+
+# Static method
+print(Employee.is_over_time_payable(2))
