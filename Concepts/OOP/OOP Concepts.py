@@ -1,4 +1,7 @@
-# [class]
+# [In this section of OOp Concepts, I learnt class, constructors(default and alternative), static, class, and
+# instance methods, instance and class variables]
+
+
 class Employee:
     # class variable, instances can also access it, if the same is not defined for their own scope
     raise_amount = 1.05
@@ -30,6 +33,7 @@ class Employee:
         return cls(f_name, m_name, l_name, emp_number, designation, salary)
 
     # Static methods differ from Class and Instance methods as they do not take instance or class as first argument
+    # Those methods should be logically Static methods in which no Instance or Class references are used
     @staticmethod
     def is_over_time_payable(over_time_hours):
         if over_time_hours >= 6:
