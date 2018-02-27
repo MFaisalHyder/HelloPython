@@ -22,3 +22,4 @@ class SpanishLeague:
     def register_club(cls, comma_separated_club_info):
         club_name, home_ground, home_ground_capacity, manager_name, asst_manager_name, total_players_in_squad = comma_separated_club_info.split(",")
         return cls(club_name, home_ground, home_ground_capacity, manager_name, asst_manager_name, total_players_in_squad)
+
