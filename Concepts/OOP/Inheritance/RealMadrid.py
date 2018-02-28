@@ -18,8 +18,16 @@ class RealMadrid(SpanishLeague):
     def la_liga_schedule(self):
         pass
 
+    def copa_del_rey_schedule(self):
+        pass
+
+    def champions_league_schedule(self):
+        pass
+
     def match_schedule(self, specific_league):
         if (specific_league == RealMadrid.LaLiga):
             RealMadrid.la_liga_schedule()
-        elif  (specific_league == RealMadrid.Copa_Del_Rey):
+        elif (specific_league == RealMadrid.Copa_Del_Rey):
             RealMadrid.copa_del_rey_schedule()
+        else:
+            RealMadrid.champions_league_schedule()
