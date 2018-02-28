@@ -9,5 +9,17 @@ from .LaLiga import SpanishLeague
 class RealMadrid(SpanishLeague):
     # Every attribute and method available in SpanishLeague (parent class) is available to current class as well.
 
+    LaLiga = 'LaLiga'
+    Copa_Del_Rey = 'Copa_Del_Rey'
+
     def register_club(self, comma_separated_club_info_str):
         SpanishLeague.register_club(comma_separated_club_info_str)
+
+    def la_liga_schedule(self):
+        pass
+
+    def match_schedule(self, specific_league):
+        if (specific_league == RealMadrid.LaLiga):
+            RealMadrid.la_liga_schedule()
+        elif  (specific_league == RealMadrid.Copa_Del_Rey):
+            RealMadrid.copa_del_rey_schedule()
