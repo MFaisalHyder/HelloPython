@@ -9,8 +9,8 @@ from .LaLiga import SpanishLeague
 class RealMadrid(SpanishLeague):
     # Every attribute and method available in SpanishLeague (parent class) is available to current class as well.
 
-    LaLiga = 'LaLiga'
-    Copa_Del_Rey = 'Copa_Del_Rey'
+    LaLiga = 'La_liga'
+    Copa_Del_Rey = 'copa_del_rey'
 
     def register_club(self, comma_separated_club_info_str):
         SpanishLeague.register_club(comma_separated_club_info_str)
