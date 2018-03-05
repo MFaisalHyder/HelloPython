@@ -31,7 +31,3 @@ class RealMadrid(SpanishLeague):
             RealMadrid.copa_del_rey_schedule()
         else:
             RealMadrid.champions_league_schedule()
-
-
-# This functions helps to visualize easily the hierarchy of inherited class and Method resolution order
-print(help(RealMadrid))
