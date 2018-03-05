@@ -45,3 +45,7 @@ print(list)
 # pop() [Removes last element from the list]
 list.pop()
 print(list)
+
+# remove() [Takes element as argument present in list to remove]
+list.remove(2)
+print(list)
