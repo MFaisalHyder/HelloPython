@@ -45,6 +45,10 @@ class Manager(Employee):
         if employee in self.employees_list:
             self.employees_list.remove(employee)
 
+    def reporting_employees(self):
+        for employee in self.employees_list:
+            print(employee)
+
 
 faisalDev = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 165000)
 faisalPythonDev = Developer('Muhammad', 'Faisal', 'Hyder', 'PyLab_11', 'Software Engineer', 165000, 'Python')
