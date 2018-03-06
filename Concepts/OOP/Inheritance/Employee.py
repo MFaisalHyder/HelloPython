@@ -60,3 +60,7 @@ faisalJavaDev = Developer('Muhammad', 'Faisal', 'Hyder', 'Av_11', 'Software Engi
 print(faisalDev.salary)
 faisalDev.apply_raise()
 print(faisalDev.salary)
+
+print(faisalJavaDev.programming_lang)
+# print(faisalDev.programming_lang) parent cannot access child's scope attributes
+print(faisalPythonDev.programming_lang)
