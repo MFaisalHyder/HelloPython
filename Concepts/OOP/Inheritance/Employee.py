@@ -54,6 +54,8 @@ faisalDev = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Eng
 faisalPythonDev = Developer('Muhammad', 'Faisal', 'Hyder', 'PyLab_11', 'Software Engineer', 165000, 'Python')
 faisalJavaDev = Developer('Muhammad', 'Faisal', 'Hyder', 'Av_11', 'Software Engineer', 185000, 'Java')
 
+manager = Manager('Muhammad', 'Ghazanfer', 'Ali', '360_Facotrs', 'Architect', 550000, [faisalPythonDev, faisalJavaDev])
+
 # This functions helps to visualize easily the hierarchy of inherited class and Method resolution order
 # print(help(Developer))
 
@@ -64,3 +66,6 @@ print(faisalDev.salary)
 print(faisalJavaDev.programming_lang)
 # print(faisalDev.programming_lang) parent cannot access child's scope attributes
 print(faisalPythonDev.programming_lang)
+
+
+print(manager.reporting_employees)
