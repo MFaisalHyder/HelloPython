@@ -12,13 +12,18 @@ class Employee:
     def apply_raise(self):
         self.salary = int(self.salary * self.raise_amount)
 
+    def employee_info(self):
+        return self.firstName + ' ' + self.lastName
 
-# This is the syntax to inherit a class in Python.
+    # This is the syntax to inherit a class in Python.
+
+
 class Developer(Employee):
     raise_amount = 1.15
 
     # Constructor of Developer class
-    def __init__(self, first_name, middle_name, last_name, employee_number, employee_designation, salary, programming_lang):
+    def __init__(self, first_name, middle_name, last_name, employee_number, employee_designation, salary,
+                 programming_lang):
         pass
         # Now there are two ways to let Parent's constructor handle initialization of common field, this way we achieve DRY principle
         # 1st
@@ -29,7 +34,8 @@ class Developer(Employee):
 
 
 class Manager(Employee):
-    def __init__(self, first_name, middle_name, last_name, employee_number, employee_designation, salary, employees_list=None):
+    def __init__(self, first_name, middle_name, last_name, employee_number, employee_designation, salary,
+                 employees_list=None):
         # it is better to set mutable data types with None in parameters list
         super().__init__(first_name, middle_name, last_name, employee_number, employee_designation, salary)
         if employees_list is None:
@@ -47,14 +53,14 @@ class Manager(Employee):
 
     def reporting_employees(self):
         for employee in self.employees_list:
-            print(employee)
+            print(employee.employee_info())
 
 
 faisalDev = Employee('Muhammad', 'Faisal', 'Hyder', 'RC_10000386', 'Software Engineer', 165000)
 faisalPythonDev = Developer('Muhammad', 'Faisal', 'Hyder', 'PyLab_11', 'Software Engineer', 165000, 'Python')
 faisalJavaDev = Developer('Muhammad', 'Faisal', 'Hyder', 'Av_11', 'Software Engineer', 185000, 'Java')
 
-manager = Manager('Muhammad', 'Ghazanfer', 'Ali', '360_Facotrs', 'Architect', 550000, [faisalPythonDev, faisalJavaDev])
+manager = Manager('Muhammad', 'Ghazanfer', 'Ali', '360_Factors', 'Architect', 550000, [faisalPythonDev, faisalJavaDev])
 
 # This functions helps to visualize easily the hierarchy of inherited class and Method resolution order
 # print(help(Developer))
@@ -67,5 +73,4 @@ print(faisalJavaDev.programming_lang)
 # print(faisalDev.programming_lang) parent cannot access child's scope attributes
 print(faisalPythonDev.programming_lang)
 
-
-print(manager.reporting_employees)
+manager.reporting_employees()
