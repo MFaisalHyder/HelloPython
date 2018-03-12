@@ -74,3 +74,7 @@ print(faisalJavaDev.programming_lang)
 print(faisalPythonDev.programming_lang)
 
 manager.reporting_employees()
+
+# method to find out if given object is an instance of a given Class or not
+print('Is faisalJavaDev a Developer', isinstance(faisalJavaDev, Developer))
+print('Is faisalJavaDev an Employee', isinstance(faisalJavaDev, Employee))
