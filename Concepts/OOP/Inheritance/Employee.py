@@ -78,3 +78,6 @@ manager.reporting_employees()
 # method to find out if given object is an instance of a given Class or not
 print('Is faisalJavaDev a Developer', isinstance(faisalJavaDev, Developer))
 print('Is faisalJavaDev an Employee', isinstance(faisalJavaDev, Employee))
+
+print('Is manager a Developer', isinstance(manager, Developer))
+print('Is manager a Employee', isinstance(manager, Employee))
