@@ -81,3 +81,6 @@ print('Is faisalJavaDev an Employee', isinstance(faisalJavaDev, Employee))
 
 print('Is manager a Developer', isinstance(manager, Developer))
 print('Is manager a Employee', isinstance(manager, Employee))
+
+# this is also a method to find if the class is sub class of given class.
+print('Developer class is subclass of Employee class', issubclass(Developer, Employee))
