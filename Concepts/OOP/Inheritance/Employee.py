@@ -17,7 +17,7 @@ class Employee:
 
     def __repr__(self):
         return "Employee('{}', '{}', '{}', '{}', '{}', {})".format(self.firstName, self.middleName, self.lastName,
-                                                                 self.employeeNumber, self.designation, self.salary)
+                                                                   self.employeeNumber, self.designation, self.salary)
 
 
 # This is the syntax to inherit a class in Python.
@@ -95,7 +95,10 @@ print('Developer class is subclass of Employee class', issubclass(Developer, Emp
 """
 Two other common methods are 
 __repr__: un ambiguous representation of an Object
-__str__: readable presentation of an Object 
+__str__: readable presentation of an Object
+
+__repr__ is required, if we use 'str' but have only 'repr' defined then 'str' falls back to implementation of 'repr'
 """
 
-print(faisalDev)  # before repr it just prints information about memory location of given object
+print(repr(faisalDev))  # before repr it just prints information about memory location of given object
+print(str(faisalDev))
