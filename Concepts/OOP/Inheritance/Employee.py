@@ -15,9 +15,12 @@ class Employee:
     def employee_info(self):
         return self.firstName + ' ' + self.lastName
 
-    # This is the syntax to inherit a class in Python.
+    def __repr__(self):
+        return "Employee('{}', '{}', '{}', '{}', '{}', {})".format(self.firstName, self.middleName, self.lastName,
+                                                                 self.employeeNumber, self.designation, self.salary)
 
 
+# This is the syntax to inherit a class in Python.
 class Developer(Employee):
     raise_amount = 1.15
 
@@ -25,7 +28,7 @@ class Developer(Employee):
     def __init__(self, first_name, middle_name, last_name, employee_number, employee_designation, salary,
                  programming_lang):
         pass
-        # Now there are two ways to let Parent's constructor handle initialization of common field, this way we achieve DRY principle
+        # There are two ways to let Parent's constructor handle initialization of common field, & achieve DRY principle
         # 1st
         super().__init__(first_name, middle_name, last_name, employee_number, employee_designation, salary)
         # 2nd
@@ -84,3 +87,15 @@ print('Is manager a Employee', isinstance(manager, Employee))
 
 # this is also a method to find if the class is sub class of given class.
 print('Developer class is subclass of Employee class', issubclass(Developer, Employee))
+
+# Special Methods [also called Magic or Dunder methods; because they are usually surrounded by __func_name__]
+# These methods allow to change some builtin behaviour
+# Most common example is __init__ method.
+
+"""
+Two other common methods are 
+__repr__: un ambiguous representation of an Object
+__str__: readable presentation of an Object 
+"""
+
+print(faisalDev)  # before repr it just prints information about memory location of given object
