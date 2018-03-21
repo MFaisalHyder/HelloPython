@@ -22,6 +22,10 @@ class Employee:
     def __str__(self):
         return '{} - {}'.format(self.firstName, self.designation);
 
+    # operator overloading for objects of type Employee
+    def __add__(self, other):
+        return self.salary + other.salary
+
 
 # This is the syntax to inherit a class in Python.
 class Developer(Employee):
@@ -107,3 +111,9 @@ print(faisalDev)  # if 'str' is provided then it will be used as default represe
 
 # print(repr(faisalDev))  # before repr it just prints information about memory location of given object
 # print(str(faisalDev))
+
+# this 'add' dunder method is supported by int and str both to perform operator overloading
+print(int.__add__(1, 5))
+print(str.__add__('Xiaomi', ' - Redmi 5 Plus'))
+
+print('Combined salary for Java & Python role = ', faisalJavaDev + faisalPythonDev)
