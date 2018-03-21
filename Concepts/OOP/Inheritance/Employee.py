@@ -22,6 +22,7 @@ class Employee:
     def __str__(self):
         return '{} - {}'.format(self.firstName, self.designation);
 
+
 # This is the syntax to inherit a class in Python.
 class Developer(Employee):
     raise_amount = 1.15
@@ -102,5 +103,7 @@ __str__: readable presentation of an Object
 __repr__ is required, if we use 'str' but have only 'repr' defined then 'str' falls back to implementation of 'repr'
 """
 
-print(repr(faisalDev))  # before repr it just prints information about memory location of given object
-print(str(faisalDev))
+print(faisalDev)  # if 'str' is provided then it will be used as default representation of object else 'repr' is used
+
+# print(repr(faisalDev))  # before repr it just prints information about memory location of given object
+# print(str(faisalDev))
