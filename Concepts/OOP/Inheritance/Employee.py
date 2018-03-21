@@ -19,6 +19,8 @@ class Employee:
         return "Employee('{}', '{}', '{}', '{}', '{}', {})".format(self.firstName, self.middleName, self.lastName,
                                                                    self.employeeNumber, self.designation, self.salary)
 
+    def __str__(self):
+        return '{} - {}'.format(self.firstName, self.designation);
 
 # This is the syntax to inherit a class in Python.
 class Developer(Employee):
