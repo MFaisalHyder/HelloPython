@@ -98,7 +98,7 @@ print('Developer class is subclass of Employee class', issubclass(Developer, Emp
 # Special Methods [also called Magic or Dunder methods; because they are usually surrounded by __func_name__]
 # These methods allow to change some builtin behaviour
 # Most common example is __init__ method.
-
+# https://docs.python.org/3/reference/datamodel.html#special-method-names
 """
 Two other common methods are 
 __repr__: un ambiguous representation of an Object
